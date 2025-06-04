@@ -125,7 +125,7 @@
                   <source>22</source>
                   <target>22</target>
                   <compilerArgs>
-                    <arg>--add-modules=jdk.incubator.vector</arg>
+<!--                    <arg>&#45;&#45;add-modules=jdk.incubator.vector</arg>-->
                     <arg>--enable-preview</arg>
                   </compilerArgs>
                   <jdkToolchain>
@@ -138,6 +138,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.3.1</version>
           <configuration>
+            <argLine>--enable-preview --add-modules jdk.incubator.vector</argLine>
             <failIfNoSpecifiedTests>false</failIfNoSpecifiedTests>
           </configuration>
           <executions>
@@ -147,6 +148,8 @@
               <goals>
                 <goal>test</goal>
               </goals>
+
+
               <configuration>
                 <jdkToolchain>
                     <version>20</version>
