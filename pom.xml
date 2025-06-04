@@ -122,10 +122,11 @@
                 <!-- We compile with highest jdk to lowest supported target, this is the best compatibility -->
                 <configuration>
 
-                  <source>20</source>
-                  <target>20</target>
+                  <source>22</source>
+                  <target>22</target>
                   <compilerArgs>
                     <arg>--add-modules=jdk.incubator.vector</arg>
+                    <arg>--enable-preview</arg>
                   </compilerArgs>
                   <jdkToolchain>
                     <version>22</version>
@@ -341,7 +342,7 @@
       <modules>
           <module>jlama-core</module>
           <module>jlama-native</module>
-          <module>jlama-net</module>
+<!--          <module>jlama-net</module>-->
           <module>jlama-cli</module>
           <module>jlama-tests</module>
       </modules>
@@ -354,7 +355,7 @@
       <modules>
         <module>jlama-core</module>
         <module>jlama-native</module>
-        <module>jlama-net</module>
+<!--        <module>jlama-net</module>-->
         <module>jlama-cli</module>
       </modules>
       <distributionManagement>
